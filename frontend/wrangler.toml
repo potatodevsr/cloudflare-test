@@ -3,7 +3,7 @@ pages_build_output_dir = "dist"
 compatibility_date = "2024-01-01"
 
 [env.production]
-vars = { VITE_API_URL = "https://tasks-api.your-subdomain.workers.dev" }
+vars = { VITE_API_URL = "tasks-api.hoshiku1997.workers.dev" }
 
 [env.preview]
-vars = { VITE_API_URL = "https://tasks-api-preview.your-subdomain.workers.dev" }
+vars = { VITE_API_URL = "tasks-api.hoshiku1997.workers.dev" }

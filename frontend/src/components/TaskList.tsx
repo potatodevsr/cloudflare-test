@@ -29,7 +29,10 @@ function StatusSelect({ task }: { task: Task }) {
       value={task.status}
       disabled={loading}
       onChange={async (e) => {
-        await update(task.id, { status: e.target.value as TaskStatus });
+        await update(task.id, {
+          ...task,
+          status: e.target.value as TaskStatus,
+        });
       }}
     >
       {statuses.map((s) => (

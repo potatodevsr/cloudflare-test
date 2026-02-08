@@ -12,7 +12,7 @@ const options: Array<{ label: string; value?: TaskStatus }> = [
 
 export function StatusFilter() {
   const statusFilter = useTasksStore((s) => s.statusFilter);
-  const load = useTasksStore((s) => s.load);
+  const setStatusFilter = useTasksStore((s) => s.setStatusFilter);
   const loading = useTasksStore((s) => s.loading);
 
   return (
@@ -32,7 +32,7 @@ export function StatusFilter() {
           disabled={loading}
           onChange={(e) => {
             const v = e.target.value as TaskStatus | "";
-            void load(v === "" ? undefined : v);
+            setStatusFilter(v === "" ? undefined : v);
           }}
         >
           {options.map((o) => (

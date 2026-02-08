@@ -43,12 +43,11 @@ jobs:
           DATABASE_URL: file:./dev.db
 
       - name: Run D1 migrations (remote)
-        uses: cloudflare/wrangler-action@v3
-        with:
-          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          workingDirectory: backend
-          command: d1 migrations apply tasks-db --remote --yes
+        working-directory: backend
+        run: yes | npx wrangler d1 migrations apply tasks-db --remote
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
 
       - name: Deploy Worker
         uses: cloudflare/wrangler-action@v3

@@ -38,6 +38,17 @@ export const ListTasksQuerySchema = z.object({
 });
 
 export type TaskStatus = z.infer<typeof TaskStatusSchema>;
-export type CreateTaskInput = z.infer<typeof CreateTaskSchema>;
-export type UpdateTaskInput = z.infer<typeof UpdateTaskSchema>;
+
+export type CreateTaskInput = {
+    title: string;
+    description?: string | null;
+    status?: TaskStatus;
+};
+
+export type UpdateTaskInput = {
+    title?: string;
+    description?: string | null;
+    status?: TaskStatus;
+};
+
 export type ListTasksQuery = z.infer<typeof ListTasksQuerySchema>;

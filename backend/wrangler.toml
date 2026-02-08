@@ -1,0 +1,24 @@
+name = "tasks-api"
+main = "src/index.ts"
+
+compatibility_date = "2024-09-23"
+compatibility_flags = ["nodejs_compat"]
+
+[[d1_databases]]
+binding = "DB"
+database_name = "tasks-db"
+database_id = "5e447a80-eb4b-4756-982c-ca6da7eeaecc"
+
+[vars]
+ENVIRONMENT = "development"
+CORS_ORIGINS = "http://localhost:5173,http://127.0.0.1:5173"
+
+[env.production.vars]
+ENVIRONMENT = "production"
+CORS_ORIGINS = "https://tasks-frontend.pages.dev,https://your-custom-domain.com"
+
+[env.preview.vars]
+ENVIRONMENT = "preview"
+CORS_ORIGINS = "https://preview.tasks-frontend.pages.dev"
+
+migrations_dir = "migrations"

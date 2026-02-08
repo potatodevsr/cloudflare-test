@@ -1,6 +1,6 @@
 # Preview url
 
-[https://tasks-frontend-7tc.pages.dev/](https://tasks-frontend-7tc.pages.dev/)
+https://tasks-frontend-7tc-crj.pages.dev/
 
 ## Backend choice (Workers vs Express)
 

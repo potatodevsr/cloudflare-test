@@ -14,10 +14,8 @@ type TasksState = {
     sortOrder: SortOrder;
     loading: boolean;
     error?: string;
-
     setStatusFilter: (s?: TaskStatus) => void;
     setSorting: (sortBy: SortBy, sortOrder: SortOrder) => void;
-
     load: () => Promise<void>;
     add: (input: CreateTaskInput) => Promise<void>;
     update: (id: number, patch: UpdateTaskInput) => Promise<void>;

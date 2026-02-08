@@ -23,6 +23,6 @@ npm run dev
 
 cd ../frontend
 npm i
-USE_EXPRESS=true VITE_EXPRESS_API_URL=http://localhost:4000 npm run dev
+USE_EXPRESS=true npm run dev
 
 ```

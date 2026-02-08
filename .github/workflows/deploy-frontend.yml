@@ -37,11 +37,11 @@ jobs:
         working-directory: frontend
         run: npm run build
         env:
-          VITE_API_URL: ${{ secrets.VITE_API_URL }}
+          VITE_API_URL: https://tasks-api.hoshiku1997.workers.dev
 
       - name: Ensure Pages project exists
         working-directory: frontend
-        run: npx wrangler pages project create tasks-frontend --production-branch=main || true
+        run: npx wrangler pages project create tasks-frontend-7tc --production-branch=main || true
         env:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
@@ -52,4 +52,4 @@ jobs:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           workingDirectory: frontend
-          command: pages deploy dist --project-name=tasks-frontend
+          command: pages deploy dist --project-name=tasks-frontend-7tc

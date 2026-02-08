@@ -15,10 +15,10 @@ CORS_ORIGINS = "http://localhost:5173,http://127.0.0.1:5173"
 
 [env.production.vars]
 ENVIRONMENT = "production"
-CORS_ORIGINS = "https://tasks-frontend.pages.dev,https://your-custom-domain.com"
+CORS_ORIGINS = "https://tasks-frontend-7tc.pages.dev"
 
 [env.preview.vars]
 ENVIRONMENT = "preview"
-CORS_ORIGINS = "https://preview.tasks-frontend.pages.dev"
+CORS_ORIGINS = "https://tasks-frontend-7tc.pages.dev"
 
 migrations_dir = "migrations"
